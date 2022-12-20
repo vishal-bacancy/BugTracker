@@ -1,0 +1,31 @@
+
+<div id="success_message"></div>
+<div class="site-main">
+  <div class="site-content">
+    <div class="site-content-head">
+      <div class="row">
+        <div class="col-sm-12">
+         
+           <div class='pull-right'><a href="<%= users_path %>" class='btn btn-success back-btn-users mt7'>Back</a></div>
+          <div class="pull-right">
+           
+              <%= link_to new_user_path, class: 'site-content-head-btn mt7', remote: true do %>
+                + New User
+              
+            <%end%>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="max-width-userlist">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="site-content-data">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+    <div id='modalContainer' class='modal-right'></div>
+  </div>
+</div>
