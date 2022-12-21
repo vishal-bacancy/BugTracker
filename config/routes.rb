@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   ActiveAdmin.routes(self)
-  # resources :comments
-  # resources :tickets
+  resources :comments
+  resources :tickets
   resources :projects
   devise_for :users, controllers: { 
     registrations: 'users/registrations', 
