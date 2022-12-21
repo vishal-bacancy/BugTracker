@@ -73,3 +73,9 @@ end
 
 gem "pg"
 gem 'rolify'
+gem 'devise'
+# gem 'activeadmin'
+# gem 'cancancan'
+# gem 'draper'
+# gem 'pundit'
+gem 'sass-rails'
