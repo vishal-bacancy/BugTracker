@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  ActiveAdmin.routes(self)
   resources :comments
   resources :tickets
   resources :projects
