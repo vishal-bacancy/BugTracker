@@ -1,8 +1,14 @@
 Rails.application.routes.draw do
+  ActiveAdmin.routes(self)
+  # resources :comments
+  # resources :tickets
+  resources :projects
+  devise_for :users, controllers: { 
+    registrations: 'users/registrations', 
+    sessions: 'users/sessions',
+    passwords: 'users/passwords'
+  }
+  
   resources :users
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
-  root "users#index"
+  root  "projects#index" 
 end
