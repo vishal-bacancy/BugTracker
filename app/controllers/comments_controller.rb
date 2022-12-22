@@ -1,5 +1,13 @@
+# frozen_string_literal: true
+
 class CommentsController < ApplicationController
   before_action :set_comment, only: %i[ show edit update destroy ]
+
+  private
+
+  def comment_params
+    params.require(:comment).permit(:description, :user_id, :ticket_id)
+  end
 
   # GET /comments or /comments.json
   def index
@@ -67,4 +75,5 @@ class CommentsController < ApplicationController
     def comment_params
       params.require(:comment).permit(:description)
     end
+
 end
