@@ -1,71 +1,106 @@
 # frozen_string_literal: true
-
 class UsersController < ApplicationController
   before_action :set_user, only: %i[show edit update destroy]
-
-  # GET /users or /users.json
   def index
     @users = User.all
+    redirect_to '/'
   end
 
-  # GET /users/1 or /users/1.json
-  def show; end
-
-  # GET /users/new
-  def new
-    @user = User.new
-  end
-
-  # GET /users/1/edit
-  def edit; end
-
-  # POST /users or /users.json
-  def create
-    @user = User.new(user_params)
-
-    respond_to do |format|
-      if @user.save
-        format.html { redirect_to user_url(@user), notice: 'User was successfully created.' }
-        format.json { render :show, status: :created, location: @user }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # PATCH/PUT /users/1 or /users/1.json
-  def update
-    respond_to do |format|
-      if @user.update(user_params)
-        format.html { redirect_to user_url(@user), notice: 'User was successfully updated.' }
-        format.json { render :show, status: :ok, location: @user }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # DELETE /users/1 or /users/1.json
-  def destroy
-    @user.destroy
-
-    respond_to do |format|
-      format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
-      format.json { head :no_content }
-    end
-  end
-
-  private
-
-  # Use callbacks to share common setup or constraints between actions.
-  def set_user
+  def show
     @user = User.find(params[:id])
   end
 
-  # Only allow a list of trusted parameters through.
+  def new
+    @user = User.new
+    @roles = []
+    Role.select('id', 'name').all.each { |v| @roles << [v.name, v.id] }
+  end
+
+  def create_user
+    role = params['user']['roles']
+    params[:selected_value] = params['user']['roles']
+    @user = User.new(user_params)
+    @user.roles << Role.find(role)
+    @roles = []
+    Role.select('id', 'name').all.each { |v| @roles << [v.name, v.id] }
+
+    if @user.save
+      PasswordMailer.with(user: @user, password: @user.password).new_cridential_mail.deliver_later
+      redirect_to '/'
+    else
+      # render :new, status: :unprocessable_entity
+    end
+  end
+
+  def edit
+    @user = User.find(params[:id])
+
+    params[:selected_value] = @user.roles.first.id
+    render file: 'public/403.html' unless can? :edit, @user
+
+    @roles = []
+    Role.select('id', 'name').all.each { |v| @roles << [v.name, v.id] }
+  end
+
+  def update
+    @user = User.find(params[:id])
+    old_role = @user.roles.first.name
+    roles = params['user']['roles']
+    params[:selected_value] = params['user']['roles']
+    @roles = []
+    Role.select('id', 'name').all.each { |v| @roles << [v.name, v.id] }
+    if current_user.has_role? 'admin'
+      @user.roles.each do |role|
+        @user.roles.delete(role) if role
+      end
+      @user.roles << Role.find(roles)
+    end
+
+    current_password = params['user']['current_password']
+    current_password = current_password.blank? ? '' : current_password
+
+    if current_password != ''
+      if @user.update_with_password(account_update_params_with_password)
+        redirect_to action: 'index'
+      else
+        render :edit, status: :unprocessable_entity
+      end
+    elsif current_user.roles.first.name == 'admin' && params[:user][:id] != current_user.id
+      UserMailer.with(user: @user, old_role: old_role).role_changed.deliver_later
+      if @user.update(account_update_params_without_password)
+
+        redirect_to action: 'index'
+      else
+        render :edit, status: :unprocessable_entity
+      end
+
+    elsif @user.update(account_update_params_without_password)
+      redirect_to action: 'index'
+
+    else
+      render :edit, status: :unprocessable_entity
+    end
+  end
+
+  def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+    redirect_to action: 'index'
+  end
+
+  
+  # private 
+  private
+
   def user_params
     params.require(:user).permit(:username, :fullname, :email, :password, :roles)
+  end
+
+  def account_update_params_with_password
+    params.require(:user).permit(:username, :fullname, :email, :password, :roles)
+  end
+
+  def account_update_params_without_password
+    params.require(:user).permit(:username, :fullname, :email, :roles)
   end
 end

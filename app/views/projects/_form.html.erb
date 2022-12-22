@@ -11,12 +11,33 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+  <div class="row">
+    <div class="col-12">
+      <%= form.label :name, class: "form-label" %>
+      <%= form.text_field :name, class: "form-control" %>
+    </div>
+  </div>
+  
+  <div class="row mt-2">
+    <div class="col-12">
+      <%= form.label :collaborators, class: "form-label" %>
+      <%= form.select :user_id , @user, selected: params[:selected_value] %>
+    </div>
   </div>
 
-  <div>
-    <%= form.submit %>
+  <% if current_user.has_role?(:admin) %>
+    <div class="row mt-2">
+      <div class="col-12">
+        <%= form.label :manager %>
+        <%= form.select :creator_id , @manager, :selected => params[:selected_manager] %>
+      </div>
+    </div>
+  <% else %>
+    <%= form.hidden_field  :creator_id, value:current_user.id%>
+  <% end %>
+
+  <div class="row mt-3 justify-content-end">
+    <%= form.submit class: 'btn btn-success mr-2' %>
+    <%= link_to 'Back', projects_path, class: 'btn btn-info mr-2' %>
   </div>
 <% end %>

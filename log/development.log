@@ -15440,3 +15440,804 @@ app/views/projects/show.html.erb:5
   [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(4610993128462332570)[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2022-12-22 11:32:17 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::DuplicateMigrationNameError (
+
+Multiple migrations have the name CreateComments.
+
+):
+  
+activerecord (7.0.4) lib/active_record/migration.rb:1384:in `validate'
+activerecord (7.0.4) lib/active_record/migration.rb:1257:in `initialize'
+activerecord (7.0.4) lib/active_record/migration.rb:1135:in `new'
+activerecord (7.0.4) lib/active_record/migration.rb:1135:in `open'
+activerecord (7.0.4) lib/active_record/migration.rb:156:in `detailed_migration_message'
+activerecord (7.0.4) lib/active_record/migration.rb:147:in `initialize'
+activerecord (7.0.4) lib/active_record/migration.rb:627:in `exception'
+activerecord (7.0.4) lib/active_record/migration.rb:627:in `raise'
+activerecord (7.0.4) lib/active_record/migration.rb:627:in `check_pending!'
+activerecord (7.0.4) lib/active_record/migration.rb:592:in `block (2 levels) in call'
+activesupport (7.0.4) lib/active_support/file_update_checker.rb:83:in `execute'
+activerecord (7.0.4) lib/active_record/migration.rb:597:in `block in call'
+activerecord (7.0.4) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+request_store (1.5.1) lib/request_store/middleware.rb:19:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4610993128462332570)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateComments (20221220182914)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.5ms)[0m  [1m[35mCREATE TABLE "comments" ("id" bigserial primary key, "description" text, "user_id" bigint NOT NULL, "ticket_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_03de2dc08c"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_e013b60ecb"
+FOREIGN KEY ("ticket_id")
+  REFERENCES "tickets" ("id")
+)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(4610993128462332570)[0m
+Started GET "/" for ::1 at 2022-12-22 11:34:07 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCACHE ActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20221220182914_create_comments.rb
+
+
+):
+  
+activerecord (7.0.4) lib/active_record/migration.rb:627:in `check_pending!'
+activerecord (7.0.4) lib/active_record/migration.rb:592:in `block (2 levels) in call'
+activesupport (7.0.4) lib/active_support/file_update_checker.rb:83:in `execute'
+activerecord (7.0.4) lib/active_record/migration.rb:597:in `block in call'
+activerecord (7.0.4) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+request_store (1.5.1) lib/request_store/middleware.rb:19:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4610993128462332570)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateComments (20221220182914)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "comments" ("id" bigserial primary key, "description" text, "user_id" bigint NOT NULL, "ticket_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_03de2dc08c"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_e013b60ecb"
+FOREIGN KEY ("ticket_id")
+  REFERENCES "tickets" ("id")
+)[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(4610993128462332570)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4610993128462332570)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateComments (20221220182914)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "comments" ("id" bigserial primary key, "description" text, "user_id" bigint NOT NULL, "ticket_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_03de2dc08c"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_e013b60ecb"
+FOREIGN KEY ("ticket_id")
+  REFERENCES "tickets" ("id")
+)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4610993128462332570)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4610993128462332570)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to Comments (20221220182914)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "comments" ("id" bigserial primary key, "description" text, "user_id" bigint NOT NULL, "ticket_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_03de2dc08c"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_e013b60ecb"
+FOREIGN KEY ("ticket_id")
+  REFERENCES "tickets" ("id")
+)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4610993128462332570)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4610993128462332570)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to Comments (20221220182914)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "comments" ("id" bigserial primary key, "description" text, "user_id" bigint NOT NULL, "ticket_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_03de2dc08c"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_e013b60ecb"
+FOREIGN KEY ("ticket_id")
+  REFERENCES "tickets" ("id")
+)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4610993128462332570)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4610993128462332570)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(4610993128462332570)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4610993128462332570)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateComments (20221221172959)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.2ms)[0m  [1m[35mDROP TABLE "comments"[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (0.4ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20221221172959"]]
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4610993128462332570)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4610993128462332570)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateComments (20221221172959)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (13.1ms)[0m  [1m[35mCREATE TABLE "comments" ("id" bigserial primary key, "description" text, "user_id" bigint NOT NULL, "ticket_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_03de2dc08c"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_e013b60ecb"
+FOREIGN KEY ("ticket_id")
+  REFERENCES "tickets" ("id")
+)[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE INDEX "index_comments_on_user_id" ON "comments" ("user_id")[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE INDEX "index_comments_on_ticket_id" ON "comments" ("ticket_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20221221172959"]]
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(4610993128462332570)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2022-12-22 11:49:05 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:6
+  Rendered projects/_project.html.erb (Duration: 1.2ms | Allocations: 204)
+  Rendered projects/_project.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered projects/_project.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered projects/index.html.erb within layouts/application (Duration: 23.9ms | Allocations: 15520)
+  Rendered layout layouts/application.html.erb (Duration: 108.9ms | Allocations: 85369)
+Completed 200 OK in 181ms (Views: 109.4ms | ActiveRecord: 8.2ms | Allocations: 112950)
+
+
+Started GET "/admin" for ::1 at 2022-12-22 11:49:44 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /usr/share/rvm/gems/ruby-3.0.0/bundler/gems/activeadmin-51689e48ec3f/app/views/active_admin/page/index.html.arb
+  Rendered /usr/share/rvm/gems/ruby-3.0.0/bundler/gems/activeadmin-51689e48ec3f/app/views/active_admin/page/index.html.arb (Duration: 70.6ms | Allocations: 59934)
+Completed 200 OK in 132ms (Views: 77.0ms | ActiveRecord: 3.2ms | Allocations: 87957)
+
+
+Started GET "/admin/projects" for ::1 at 2022-12-22 11:49:48 +0530
+Processing by Admin::ProjectsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /usr/share/rvm/gems/ruby-3.0.0/bundler/gems/activeadmin-51689e48ec3f/app/views/active_admin/resource/index.html.arb
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."id" desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTicket Load (0.5ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  Rendered /usr/share/rvm/gems/ruby-3.0.0/bundler/gems/activeadmin-51689e48ec3f/app/views/active_admin/resource/index.html.arb (Duration: 110.1ms | Allocations: 77733)
+Completed 200 OK in 130ms (Views: 104.2ms | ActiveRecord: 15.8ms | Allocations: 81730)
+
+
+Started GET "/admin/projects/new" for ::1 at 2022-12-22 11:49:57 +0530
+Processing by Admin::ProjectsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /usr/share/rvm/gems/ruby-3.0.0/bundler/gems/activeadmin-51689e48ec3f/app/views/active_admin/resource/new.html.arb
+  Rendered /usr/share/rvm/gems/ruby-3.0.0/bundler/gems/activeadmin-51689e48ec3f/app/views/active_admin/resource/new.html.arb (Duration: 52.2ms | Allocations: 20090)
+Completed 200 OK in 59ms (Views: 53.6ms | ActiveRecord: 0.4ms | Allocations: 22102)
+
+
+Started POST "/admin/projects" for ::1 at 2022-12-22 11:50:03 +0530
+Processing by Admin::ProjectsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "project"=>{"name"=>"new project"}, "commit"=>"Create Project"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Create (1.2ms)[0m  [1m[32mINSERT INTO "projects" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "new project"], ["created_at", "2022-12-22 06:20:03.487789"], ["updated_at", "2022-12-22 06:20:03.487789"]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/admin/projects/4
+Completed 302 Found in 22ms (ActiveRecord: 3.4ms | Allocations: 7907)
+
+
+Started GET "/admin/projects/4" for ::1 at 2022-12-22 11:50:03 +0530
+Processing by Admin::ProjectsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering /usr/share/rvm/gems/ruby-3.0.0/bundler/gems/activeadmin-51689e48ec3f/app/views/active_admin/resource/show.html.arb
+  Rendered /usr/share/rvm/gems/ruby-3.0.0/bundler/gems/activeadmin-51689e48ec3f/app/views/active_admin/resource/show.html.arb (Duration: 28.5ms | Allocations: 17383)
+Completed 200 OK in 38ms (Views: 29.7ms | ActiveRecord: 0.6ms | Allocations: 20610)
+
+
+Started GET "/admin/projects" for ::1 at 2022-12-22 11:50:09 +0530
+Processing by Admin::ProjectsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /usr/share/rvm/gems/ruby-3.0.0/bundler/gems/activeadmin-51689e48ec3f/app/views/active_admin/resource/index.html.arb
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."id" desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTicket Load (0.5ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  Rendered /usr/share/rvm/gems/ruby-3.0.0/bundler/gems/activeadmin-51689e48ec3f/app/views/active_admin/resource/index.html.arb (Duration: 67.7ms | Allocations: 40538)
+Completed 200 OK in 74ms (Views: 66.4ms | ActiveRecord: 2.3ms | Allocations: 42394)
+
+
+Started GET "/admin/ticket_comments" for ::1 at 2022-12-22 11:50:11 +0530
+Processing by Admin::TicketCommentsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /usr/share/rvm/gems/ruby-3.0.0/bundler/gems/activeadmin-51689e48ec3f/app/views/active_admin/resource/index.html.arb
+  [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" ORDER BY "comments"."id" desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTicket Load (0.5ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  Rendered /usr/share/rvm/gems/ruby-3.0.0/bundler/gems/activeadmin-51689e48ec3f/app/views/active_admin/resource/index.html.arb (Duration: 51.3ms | Allocations: 29921)
+Completed 200 OK in 60ms (Views: 52.2ms | ActiveRecord: 1.9ms | Allocations: 32732)
+
+
+Started GET "/admin/ticket_comments/new" for ::1 at 2022-12-22 11:50:22 +0530
+Processing by Admin::TicketCommentsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /usr/share/rvm/gems/ruby-3.0.0/bundler/gems/activeadmin-51689e48ec3f/app/views/active_admin/resource/new.html.arb
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTicket Load (0.5ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  Rendered /usr/share/rvm/gems/ruby-3.0.0/bundler/gems/activeadmin-51689e48ec3f/app/views/active_admin/resource/new.html.arb (Duration: 57.7ms | Allocations: 29330)
+Completed 200 OK in 77ms (Views: 58.2ms | ActiveRecord: 1.3ms | Allocations: 44928)
+
+
+Started POST "/admin/ticket_comments" for ::1 at 2022-12-22 11:50:37 +0530
+Processing by Admin::TicketCommentsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "comment"=>{"user_id"=>"1", "ticket_id"=>"1", "description"=>"this is demo description"}, "commit"=>"Create Comment"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTicket Load (0.3ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mComment Create (1.2ms)[0m  [1m[32mINSERT INTO "comments" ("description", "user_id", "ticket_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "this is demo description"], ["user_id", 1], ["ticket_id", 1], ["created_at", "2022-12-22 06:20:37.057829"], ["updated_at", "2022-12-22 06:20:37.057829"]]
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/admin/ticket_comments/1
+Completed 302 Found in 34ms (ActiveRecord: 5.0ms | Allocations: 10250)
+
+
+Started GET "/admin/ticket_comments/1" for ::1 at 2022-12-22 11:50:37 +0530
+Processing by Admin::TicketCommentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /usr/share/rvm/gems/ruby-3.0.0/bundler/gems/activeadmin-51689e48ec3f/app/views/active_admin/resource/show.html.arb
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTicket Load (0.3ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered /usr/share/rvm/gems/ruby-3.0.0/bundler/gems/activeadmin-51689e48ec3f/app/views/active_admin/resource/show.html.arb (Duration: 27.6ms | Allocations: 21398)
+Completed 200 OK in 37ms (Views: 28.0ms | ActiveRecord: 1.5ms | Allocations: 24493)
+
+
+Started GET "/admin/tickets" for ::1 at 2022-12-22 11:50:40 +0530
+Processing by Admin::TicketsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /usr/share/rvm/gems/ruby-3.0.0/bundler/gems/activeadmin-51689e48ec3f/app/views/active_admin/resource/index.html.arb
+  [1m[36mTicket Load (0.5ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" ORDER BY "tickets"."id" desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/admin/tickets.rb:26:in `block (3 levels) in <main>'
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  Rendered /usr/share/rvm/gems/ruby-3.0.0/bundler/gems/activeadmin-51689e48ec3f/app/views/active_admin/resource/index.html.arb (Duration: 42.5ms | Allocations: 40451)
+Completed 200 OK in 48ms (Views: 42.0ms | ActiveRecord: 2.2ms | Allocations: 43271)
+
+
+Started GET "/admin/tickets/new" for ::1 at 2022-12-22 11:51:10 +0530
+Processing by Admin::TicketsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /usr/share/rvm/gems/ruby-3.0.0/bundler/gems/activeadmin-51689e48ec3f/app/views/active_admin/resource/new.html.arb
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered /usr/share/rvm/gems/ruby-3.0.0/bundler/gems/activeadmin-51689e48ec3f/app/views/active_admin/resource/new.html.arb (Duration: 39.7ms | Allocations: 26452)
+Completed 200 OK in 46ms (Views: 40.1ms | ActiveRecord: 1.0ms | Allocations: 28316)
+
+
+Started POST "/admin/tickets" for ::1 at 2022-12-22 11:51:41 +0530
+Processing by Admin::TicketsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "ticket"=>{"project_id"=>"3", "title"=>"demo comment", "description"=>"demo comment demo comment demo comment demo comment", "current_state"=>"started", "current_release_milestone"=>"5"}, "commit"=>"Create Ticket"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTicket Create (1.3ms)[0m  [1m[32mINSERT INTO "tickets" ("title", "description", "current_state", "current_release_milestone", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "demo comment"], ["description", "demo comment demo comment demo comment demo comment"], ["current_state", 2], ["current_release_milestone", "5"], ["project_id", 3], ["created_at", "2022-12-22 06:21:41.244581"], ["updated_at", "2022-12-22 06:21:41.244581"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/admin/tickets/2
+Completed 302 Found in 22ms (ActiveRecord: 3.8ms | Allocations: 7087)
+
+
+Started GET "/admin/tickets/2" for ::1 at 2022-12-22 11:51:41 +0530
+Processing by Admin::TicketsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTicket Load (0.4ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /usr/share/rvm/gems/ruby-3.0.0/bundler/gems/activeadmin-51689e48ec3f/app/views/active_admin/resource/show.html.arb
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered /usr/share/rvm/gems/ruby-3.0.0/bundler/gems/activeadmin-51689e48ec3f/app/views/active_admin/resource/show.html.arb (Duration: 27.8ms | Allocations: 19403)
+Completed 200 OK in 36ms (Views: 28.1ms | ActiveRecord: 1.1ms | Allocations: 22467)
+
+
+Started GET "/admin/tickets" for ::1 at 2022-12-22 11:51:44 +0530
+Processing by Admin::TicketsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /usr/share/rvm/gems/ruby-3.0.0/bundler/gems/activeadmin-51689e48ec3f/app/views/active_admin/resource/index.html.arb
+  [1m[36mTicket Load (0.6ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" ORDER BY "tickets"."id" desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/admin/tickets.rb:26:in `block (3 levels) in <main>'
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/admin/tickets.rb:26:in `block (3 levels) in <main>'
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  Rendered /usr/share/rvm/gems/ruby-3.0.0/bundler/gems/activeadmin-51689e48ec3f/app/views/active_admin/resource/index.html.arb (Duration: 66.1ms | Allocations: 37828)
+Completed 200 OK in 72ms (Views: 64.2ms | ActiveRecord: 2.9ms | Allocations: 39652)
+
+
+Started GET "/admin/tickets?order=current_state_desc" for ::1 at 2022-12-22 11:51:54 +0530
+Processing by Admin::TicketsController#index as HTML
+  Parameters: {"order"=>"current_state_desc"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /usr/share/rvm/gems/ruby-3.0.0/bundler/gems/activeadmin-51689e48ec3f/app/views/active_admin/resource/index.html.arb
+  [1m[36mTicket Load (0.8ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" ORDER BY "tickets"."current_state" desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/admin/tickets.rb:26:in `block (3 levels) in <main>'
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/admin/tickets.rb:26:in `block (3 levels) in <main>'
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  Rendered /usr/share/rvm/gems/ruby-3.0.0/bundler/gems/activeadmin-51689e48ec3f/app/views/active_admin/resource/index.html.arb (Duration: 66.2ms | Allocations: 37841)
+Completed 200 OK in 73ms (Views: 64.7ms | ActiveRecord: 2.8ms | Allocations: 39667)
+
+
+Started GET "/admin/tickets?order=current_state_asc" for ::1 at 2022-12-22 11:51:56 +0530
+Processing by Admin::TicketsController#index as HTML
+  Parameters: {"order"=>"current_state_asc"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /usr/share/rvm/gems/ruby-3.0.0/bundler/gems/activeadmin-51689e48ec3f/app/views/active_admin/resource/index.html.arb
+  [1m[36mTicket Load (0.6ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" ORDER BY "tickets"."current_state" asc LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/admin/tickets.rb:26:in `block (3 levels) in <main>'
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/admin/tickets.rb:26:in `block (3 levels) in <main>'
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  Rendered /usr/share/rvm/gems/ruby-3.0.0/bundler/gems/activeadmin-51689e48ec3f/app/views/active_admin/resource/index.html.arb (Duration: 58.2ms | Allocations: 37846)
+Completed 200 OK in 64ms (Views: 57.0ms | ActiveRecord: 2.2ms | Allocations: 39668)
+
+
+Started GET "/admin/tickets?order=current_state_desc" for ::1 at 2022-12-22 11:51:58 +0530
+Processing by Admin::TicketsController#index as HTML
+  Parameters: {"order"=>"current_state_desc"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /usr/share/rvm/gems/ruby-3.0.0/bundler/gems/activeadmin-51689e48ec3f/app/views/active_admin/resource/index.html.arb
+  [1m[36mTicket Load (0.7ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" ORDER BY "tickets"."current_state" desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/admin/tickets.rb:26:in `block (3 levels) in <main>'
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/admin/tickets.rb:26:in `block (3 levels) in <main>'
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  Rendered /usr/share/rvm/gems/ruby-3.0.0/bundler/gems/activeadmin-51689e48ec3f/app/views/active_admin/resource/index.html.arb (Duration: 69.6ms | Allocations: 37875)
+Completed 200 OK in 76ms (Views: 68.0ms | ActiveRecord: 3.0ms | Allocations: 39702)
+
+
+Started GET "/admin/tickets?order=current_state_asc" for ::1 at 2022-12-22 11:52:00 +0530
+Processing by Admin::TicketsController#index as HTML
+  Parameters: {"order"=>"current_state_asc"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /usr/share/rvm/gems/ruby-3.0.0/bundler/gems/activeadmin-51689e48ec3f/app/views/active_admin/resource/index.html.arb
+  [1m[36mTicket Load (0.6ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" ORDER BY "tickets"."current_state" asc LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/admin/tickets.rb:26:in `block (3 levels) in <main>'
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/admin/tickets.rb:26:in `block (3 levels) in <main>'
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  Rendered /usr/share/rvm/gems/ruby-3.0.0/bundler/gems/activeadmin-51689e48ec3f/app/views/active_admin/resource/index.html.arb (Duration: 57.5ms | Allocations: 38016)
+Completed 200 OK in 63ms (Views: 55.8ms | ActiveRecord: 2.6ms | Allocations: 39839)
+
+
+Started GET "/admin/tickets?order=current_state_desc" for ::1 at 2022-12-22 11:52:01 +0530
+Processing by Admin::TicketsController#index as HTML
+  Parameters: {"order"=>"current_state_desc"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /usr/share/rvm/gems/ruby-3.0.0/bundler/gems/activeadmin-51689e48ec3f/app/views/active_admin/resource/index.html.arb
+  [1m[36mTicket Load (0.7ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" ORDER BY "tickets"."current_state" desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/admin/tickets.rb:26:in `block (3 levels) in <main>'
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/admin/tickets.rb:26:in `block (3 levels) in <main>'
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  Rendered /usr/share/rvm/gems/ruby-3.0.0/bundler/gems/activeadmin-51689e48ec3f/app/views/active_admin/resource/index.html.arb (Duration: 62.9ms | Allocations: 37976)
+Completed 200 OK in 69ms (Views: 61.2ms | ActiveRecord: 2.7ms | Allocations: 39795)
+
+
+Started GET "/" for ::1 at 2022-12-22 11:52:17 +0530
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:6
+  Rendered projects/_project.html.erb (Duration: 1.1ms | Allocations: 184)
+  Rendered projects/_project.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered projects/_project.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered projects/_project.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered projects/index.html.erb within layouts/application (Duration: 8.9ms | Allocations: 1874)
+  Rendered layout layouts/application.html.erb (Duration: 33.4ms | Allocations: 24069)
+Completed 200 OK in 42ms (Views: 35.5ms | ActiveRecord: 1.1ms | Allocations: 26427)
+
+
+Started GET "/projects/1" for ::1 at 2022-12-22 11:52:21 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:67:in `set_project'
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/_project.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered projects/show.html.erb within layouts/application (Duration: 33.1ms | Allocations: 5430)
+  Rendered layout layouts/application.html.erb (Duration: 33.4ms | Allocations: 5502)
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 0.7ms | Allocations: 9555)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `project_tickets_path' for #<ActionView::Base:0x00000000013fd8>
+Did you mean?  project_path):
+    2: 
+    3: <%= render @project %>
+    4: <div>
+    5:   <%= link_to "List all tickets", project_tickets_path %> 
+    6:   <%= link_to "Edit this project", edit_project_path(@project) %> |
+    7:   <%= link_to "Back to projects", projects_path %>
+    8: 
+  
+app/views/projects/show.html.erb:5
+Started GET "/projects/1" for ::1 at 2022-12-22 11:57:24 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:67:in `set_project'
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/_project.html.erb (Duration: 0.8ms | Allocations: 173)
+  Rendered projects/show.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1576)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 1648)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.7ms | Allocations: 4793)
+
+
+  
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    2: 
+    3: <%= render @project %>
+    4: <div>
+    5:   <%= render @ticket %>
+    6:   <%= link_to "Edit this project", edit_project_path(@project) %> |
+    7:   <%= link_to "Back to projects", projects_path %>
+    8: 
+  
+app/views/projects/show.html.erb:5
+Started GET "/projects/1" for ::1 at 2022-12-22 11:59:17 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:67:in `set_project'
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/_project.html.erb (Duration: 1.0ms | Allocations: 173)
+  Rendered projects/show.html.erb within layouts/application (Duration: 9.7ms | Allocations: 4725)
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 4797)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.6ms | Allocations: 7941)
+
+
+  
+ActionView::Template::Error (Missing partial projects/_ticket, application/_ticket with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :arb, :jbuilder]}.
+
+Searched in:
+  * "/home/bacancy/Desktop/ror-bacancy/BugTracker (copy)/app/views"
+  * "/usr/share/rvm/gems/ruby-3.0.0/gems/devise-4.8.1/app/views"
+  * "/usr/share/rvm/gems/ruby-3.0.0/bundler/gems/activeadmin-51689e48ec3f/app/views"
+  * "/usr/share/rvm/gems/ruby-3.0.0/gems/kaminari-core-1.2.2/app/views"
+  * "/usr/share/rvm/gems/ruby-3.0.0/gems/actiontext-7.0.4/app/views"
+  * "/usr/share/rvm/gems/ruby-3.0.0/gems/actionmailbox-7.0.4/app/views"
+
+Did you mean?  projects/project
+               tickets/ticket
+               projects/form
+               comments/comment
+               action_text/contents/content
+               layouts/action_text/contents/content):
+    2: 
+    3: <%= render @project %>
+    4: <div>
+    5:   <%= render "ticket", ticket: @ticket %>
+    6:   <%= link_to "Edit this project", edit_project_path(@project) %> |
+    7:   <%= link_to "Back to projects", projects_path %>
+    8: 
+  
+app/views/projects/show.html.erb:5
+Started GET "/projects/1" for ::1 at 2022-12-22 11:59:56 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:67:in `set_project'
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/_project.html.erb (Duration: 0.6ms | Allocations: 173)
+  Rendered projects/show.html.erb within layouts/application (Duration: 16.5ms | Allocations: 5402)
+  Rendered layout layouts/application.html.erb (Duration: 17.1ms | Allocations: 5474)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.7ms | Allocations: 8617)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `_ticket' for #<ActionView::Base:0x000000000149b0>
+Did you mean?  @tickets):
+    2: 
+    3: <%= render @project %>
+    4: <div>
+    5:   <%= render @projects/_ticket %>
+    6:   <%= link_to "Edit this project", edit_project_path(@project) %> |
+    7:   <%= link_to "Back to projects", projects_path %>
+    8: 
+  
+app/views/projects/show.html.erb:5
+Started GET "/projects/1" for ::1 at 2022-12-22 12:01:43 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:67:in `set_project'
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (Duration: 42.6ms | Allocations: 1202)
+  Rendered layout layouts/application.html.erb (Duration: 42.8ms | Allocations: 1275)
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 0.8ms | Allocations: 4422)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p style="color: green"><%= notice %></p>
+
+<%= render @project %>
+<div>
+  <%= render :partial = > _ticket %>
+  <%= link_to "Edit this project", edit_project_path(@project) %> |
+  <%= link_to "Back to projects", projects_path %>
+
+  <%= button_to "Destroy this project", @project, method: :delete %>
+</div>
+
+):
+1:    <p style="color: green"><%= notice %></p>
+2:    
+3:    <%= render @project %>
+4:    <div>
+5:      <%= render :partial = > _ticket %>
+6:      <%= link_to "Edit this project", edit_project_path(@project) %> |
+7:      <%= link_to "Back to projects", projects_path %>
+8:    
+9:      <%= button_to "Destroy this project", @project, method: :delete %>
+10:    </div>
+  
+app/views/projects/show.html.erb:5: syntax error, unexpected '=', expecting ')'
+app/views/projects/show.html.erb:5: syntax error, unexpected '=', expecting ')'
+app/views/projects/show.html.erb:5: syntax error, unexpected '=', expecting ')'
+app/views/projects/show.html.erb:5: syntax error, unexpected '=', expecting ')'
+app/views/projects/show.html.erb:5: syntax error, unexpected '=', expecting ')'
+app/views/projects/show.html.erb:5: syntax error, unexpected '=', expecting ')'
+Started GET "/projects/1" for ::1 at 2022-12-22 12:05:15 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:67:in `set_project'
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/_project.html.erb (Duration: 8.4ms | Allocations: 173)
+  Rendered projects/show.html.erb within layouts/application (Duration: 11.5ms | Allocations: 902)
+  Rendered layout layouts/application.html.erb (Duration: 23.0ms | Allocations: 5913)
+Completed 200 OK in 33ms (Views: 25.4ms | ActiveRecord: 0.6ms | Allocations: 9087)
+
+
+Started GET "/projects/" for ::1 at 2022-12-22 12:24:13 +0530
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:6
+  Rendered projects/_project.html.erb (Duration: 4.8ms | Allocations: 181)
+  Rendered projects/_project.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered projects/_project.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered projects/_project.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered projects/index.html.erb within layouts/application (Duration: 9.8ms | Allocations: 2742)
+  Rendered layout layouts/application.html.erb (Duration: 24.1ms | Allocations: 24730)
+Completed 200 OK in 42ms (Views: 25.5ms | ActiveRecord: 4.2ms | Allocations: 34292)
+
+
+Started GET "/projects/" for ::1 at 2022-12-22 12:24:15 +0530
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:6
+  Rendered projects/_project.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered projects/_project.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered projects/_project.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered projects/_project.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered projects/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1081)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 5714)
+Completed 200 OK in 19ms (Views: 13.2ms | ActiveRecord: 1.0ms | Allocations: 7279)
+
+
+Started GET "/projects/" for ::1 at 2022-12-22 12:24:16 +0530
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:6
+  Rendered projects/_project.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered projects/_project.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered projects/_project.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered projects/_project.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered projects/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1081)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 5714)
+Completed 200 OK in 17ms (Views: 12.1ms | ActiveRecord: 0.8ms | Allocations: 7257)
+
+
+Started GET "/projects/" for ::1 at 2022-12-22 12:25:05 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:6
+  Rendered projects/_project.html.erb (Duration: 0.7ms | Allocations: 204)
+  Rendered projects/_project.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered projects/_project.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered projects/_project.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered projects/index.html.erb within layouts/application (Duration: 22.3ms | Allocations: 15651)
+  Rendered layout layouts/application.html.erb (Duration: 89.8ms | Allocations: 81727)
+Completed 200 OK in 154ms (Views: 89.7ms | ActiveRecord: 8.1ms | Allocations: 109282)
+
+
+Started GET "/" for ::1 at 2022-12-22 12:25:15 +0530
+Processing by ProjectsController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 261)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-12-22 12:25:15 +0530
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.4ms | Allocations: 938)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 9.5ms | Allocations: 4066)
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 8750)
+Completed 200 OK in 19ms (Views: 16.4ms | ActiveRecord: 0.0ms | Allocations: 10967)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-12-22 12:25:25 +0530
+Processing by Users::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"demo@mail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "demo@mail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 308ms (ActiveRecord: 0.4ms | Allocations: 4744)
+
+
+Started GET "/" for ::1 at 2022-12-22 12:25:25 +0530
+Processing by ProjectsController#index as TURBO_STREAM
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:6
+  Rendered projects/_project.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered projects/_project.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered projects/_project.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered projects/_project.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered projects/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1134)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 5772)
+Completed 200 OK in 9ms (Views: 6.2ms | ActiveRecord: 0.4ms | Allocations: 7327)
+
+
