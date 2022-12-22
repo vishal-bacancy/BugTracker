@@ -82,10 +82,11 @@ gem 'omniauth-google-oauth2'
 gem 'pg'
 gem 'pundit'
 gem 'rolify'
-gem 'rubocop', require: false
-gem 'sass-rails'
 gem 'rspec'
 gem 'rspec-core'
 gem 'rspec-expectations'
 gem 'rspec-mocks'
 gem 'rspec-rails'
+gem 'rubocop', require: false
+gem 'sass-rails'
+
